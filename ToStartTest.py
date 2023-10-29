@@ -25,13 +25,14 @@ def correct_group(group):
 def consists_of_letters(*args):
     for word in args:
         if not len(args[0]) or not len(args[1]):
+            sound_of_mistake()
             sg.popup('Заполните все необходимые поля для запуска теста.', icon=icon_2, background_color='pink',
                      text_color='red', font=('Segoe Print', 16), title='Ошибка регистрации',
                      button_color='red')
-            sound_of_mistake()
             return False
         for letter in word:
             if not letter.isalpha():
+                sound_of_mistake()
                 sg.popup('ФИО может содержать только буквенные символы. Исправьте вводимые данные.',
                          icon=icon_2, background_color='pink',
                          text_color='red', font=('Segoe Print', 16), title='Ошибка регистрации',
