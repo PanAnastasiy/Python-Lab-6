@@ -24,7 +24,7 @@ def correct_group(group):
 
 def consists_of_letters(*args):
     for word in args:
-        if not len(word) and word != args[-1]:
+        if not len(args[0]) or not len(args[1]):
             sg.popup('Заполните все необходимые поля для запуска теста.', icon=icon_2, background_color='pink',
                      text_color='red', font=('Segoe Print', 16), title='Ошибка регистрации',
                      button_color='red')
